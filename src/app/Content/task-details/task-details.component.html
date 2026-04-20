@@ -1,1 +1,23 @@
-<p>task-details works!</p>
+<p>Task Details</p>
+
+<div>
+    <form>
+        <label>name: </label>
+        <label style="font-size: x-large;">{{task.name}}</label><br>
+        <label>status: </label>
+        <label style="font-size: large;">{{task.status}}</label><br>
+        <label> Details: </label>
+        <label style="font-size: large;">{{task.details}}</label>
+    </form>
+</div>
+<br>
+
+<h2>taskLogs:</h2><br>
+<div>
+    <table>
+    @for (tasklog of tasklogs; track $index) {
+        <label>{{tasklog.datestamp}}</label><br>
+        <textarea disabled>{{tasklog.content}}</textarea><br>
+    }
+    </table>
+</div>

@@ -1,0 +1,15 @@
+<p>Nieuwe task</p>
+
+<div>
+    <mat-dialog-content>
+    <form [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+        <mat-label>Taskname: </mat-label>
+        <input type="text" class="formControlName" id="taskName" formControlName="taskName"><br>
+        <mat-label>Task details: </mat-label>
+        <input type="text" class="formControlName" id="taskDetails" formControlName="taskDetails"><br>
+        <mat-label>Deadline: </mat-label>
+        <input type="date" formControlName="deadline" id="deadline" formControlName="deadline"><br>
+         <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </mat-dialog-content>
+</div>

@@ -8,6 +8,7 @@ export class Task {
     ownerId: number;
     assigneeId: number;
     status: TaskStatus;
+    details: string;
 
     constructor() {
         this.taskId = 0;
@@ -16,5 +17,6 @@ export class Task {
         this.ownerId = 0;
         this.assigneeId = 0;
         this.status = TaskStatus.CLOSED;
+        this.details = "";
     }
 }

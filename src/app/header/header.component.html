@@ -1,10 +1,17 @@
-
-<div>
-<form  [formGroup]="loginUserForm" (ngSubmit)="onSubmit()">
-    <label id="username">username</label>
-    <input class="formControlName" id="username" type="text" formControlName="username"><br>
-    <label id="password">password</label>
-    <input class="formControlName" id="password" type="password" formControlName="password">
-    <button type="submit">login</button>
-</form>
- </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <h1 style="text-align: center;">Tasks App</h1>
+        </div>
+        <div class="col-sm-1">
+            <form  [formGroup]="loginUserForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="username" id="username" type="text" formControlName="username"><br>
+                <input matInput placeholder="password" class="formControlName" id="password" type="password" formControlName="password">
+                <button mat-button class="Submit">login</button>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+</div>

@@ -20,4 +20,10 @@ export class TaskService {
     console.log(completeURL);
     return this.http.get(completeURL);
    }
+
+   GetOneTask(id: string): Observable<any> {
+    let completeURL = environment.server + 'tasks/' + id;
+    console.log(completeURL);
+    return this.http.get(completeURL);
+   }
 }

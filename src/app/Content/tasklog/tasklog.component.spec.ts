@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { TasklogComponent } from './tasklog.component';
+
+describe('TasklogComponent', () => {
+  let component: TasklogComponent;
+  let fixture: ComponentFixture<TasklogComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [TasklogComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(TasklogComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

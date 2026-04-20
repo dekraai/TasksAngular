@@ -1,7 +1,7 @@
-<p>task-list works!</p>
-<h2>Tasks I Own</h2>
+<h2 >Tasks I Own</h2>
 <div>
     <button (click)="getMyTasks()">get my tasks</button>
+    <button matButton="elevated" (click)="openDialog()">New Task</button>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -13,9 +13,10 @@
         <tbody>
             @for (task of TasksIOwn; track task.taskId;) {
             <tr class="table-active">
-                <td scope="row" (click)="goToTask(task.taskId)">{{task.taskId}}</td>
-                <td scope="row" (click)="goToTask(task.taskId)">{{task.name}}</td>
-                <td scope="row" (click)="goToTask(task.taskId)">{{task.ownerId}}</td>
+                <td class="col-sm-1" scope="row" (click)="goToTask(task.taskId)">{{task.taskId}}</td>
+                <td scope="col-sm-4" (click)="goToTask(task.taskId)">{{task.name}}</td>
+                <td scope="col-sm-2" (click)="goToTask(task.taskId)">{{task.ownerId}}</td>
+                <a [routerLink]="['TaskDetails', task.taskId]">Details</a>
             </tr>
         }
         </tbody>
